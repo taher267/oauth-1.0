@@ -70,6 +70,12 @@ const token = {
 
 
 const requsestToken = () => {
+    //Axios
+    const obj = oauth.authorize(request1);
+    axios.post(request1.url, obj, { headers: oauth.toHeader(obj) })
+        .then(d => console.log(d.data))
+        .catch(e => console.log(e.response.data));
+    return
     request(
         {
             url: request1.url,
@@ -93,6 +99,11 @@ const request2 = {
     method: 'POST',
 }
 const accessToken = () => {
+    const obj = oauth.authorize(request2, token);
+    axios.post(request2.url, obj, { headers: oauth.toHeader({ ...obj, oauth_verifier }) })
+        .then(d => console.log(d.data))
+        .catch(e => console.log(e.response.data));
+    return
     request(
         {
             url: request2.url,
