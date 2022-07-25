@@ -163,3 +163,22 @@ userInfo()
 
 
 // app.listen(1919, _ => console.log(`Alhamdu lillah`))
+
+
+package.json={
+  "name": "oauth1-0a",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server",
+    "auth": "nodemon auth.js"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.1",
+    "oauth-1.0a": "^2.2.6",
+    "request": "^2.88.2"
+  }
+}
