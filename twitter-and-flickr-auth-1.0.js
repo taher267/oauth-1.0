@@ -67,7 +67,8 @@ const token = {
     key: oauth_token,
     secret: oauth_token_secret,
 }
-
+// load in browser
+//https://api.twitter.com/oauth/authorize?oauth_token=
 
 const requsestToken = () => {
     //Axios
